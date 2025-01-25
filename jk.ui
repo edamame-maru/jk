@@ -17,17 +17,49 @@
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <widget class="QTextEdit" name="textEdit">
+      <property name="font">
+       <font>
+        <family>monospace</family>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
       <property name="contextMenuPolicy">
        <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
       </property>
       <property name="autoFillBackground">
        <bool>false</bool>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QTextEdit {
+    background-color: #fdf6e3; /* Base3 */
+    color: #657b83; /* Base00 */
+    selection-background-color: #93a1a1; /* Base0 */
+    selection-color: #fdf6e3; /* Base3 */
+    border: none;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+QTextEdit:cursor {
+    color: #93a1a1; /* Base0 */
+}
+
+QTextEdit a {
+    color: #268bd2; /* Blue */
+    text-decoration: none;
+}</string>
+      </property>
       <property name="frameShape">
        <enum>QFrame::Shape::NoFrame</enum>
       </property>
       <property name="frameShadow">
        <enum>QFrame::Shadow::Plain</enum>
+      </property>
+      <property name="overwriteMode">
+       <bool>false</bool>
+      </property>
+      <property name="placeholderText">
+       <string>Start typing...</string>
       </property>
      </widget>
     </item>
